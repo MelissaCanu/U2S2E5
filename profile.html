@@ -56,8 +56,32 @@
       .custom-bg {
         background-color: #343a40;
       }
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+      }
+
+      .custom-checkbox input[type="checkbox"] {
+        margin-inline-end: 10px;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #6c757d;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+
+      .custom-checkbox input[type="checkbox"]:checked {
+        background-color: #6c757d;
+      }
+
+      .custom-checkbox label {
+        vertical-align: middle;
+      }
     </style>
   </head>
+
   <body class="bg-dark px-2 text-white">
     <a href="#">
       <img
@@ -70,12 +94,12 @@
     <div class="container d-flex flex-column align-items-center my-5">
       <div class="row">
         <div class="col text-center">
-          <h1 class="">Edit profile</h1>
+          <h1>Edit profile</h1>
         </div>
       </div>
-      <hr />
       <div class="row justify-content-center">
-        <div class="col-12 col-md-4 text-md-end">
+        <hr />
+        <div class="col-12 col-md-3 text-md-end">
           <img
             src="./Netflix-assets/assets/avatar.png"
             alt="avatar profile icon"
@@ -83,7 +107,7 @@
             style="max-height: 150px"
           />
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-9 mb-4">
           <div class="text-center text-md-start bg-secondary p-2 mb-3">
             Strive Student
           </div>
@@ -116,13 +140,24 @@
           </div>
           <hr />
           <p>Autoplay controls</p>
-          <!-- checkbox custom & Autoplay next episode in a series on all devices.-->
-          <!-- checkbox custom & Autoplay previews while browsing on all devices.-->
+          <div class="custom-checkbox">
+            <input type="checkbox" id="autoplayNext" />
+            <label for="autoplayNext"
+              >Autoplay next episode in a series on all devices.</label
+            >
+          </div>
+          <div class="custom-checkbox">
+            <input type="checkbox" id="autoplayPreviews" />
+            <label for="autoplayPreviews"
+              >Autoplay previews while browsing on all devices.</label
+            >
+          </div>
         </div>
+        <hr />
       </div>
-      <hr />
+
       <div class="row">
-        <div class="col text-center">
+        <div class="col-12 text-center">
           <button
             id="btn-save"
             type="button"
