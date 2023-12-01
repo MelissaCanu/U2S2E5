@@ -47,6 +47,11 @@
       .custom-dropdown {
         background-color: black;
       }
+
+      .clicked-btn {
+        background-color: white !important;
+        color: black !important;
+      }
     </style>
   </head>
   <body class="bg-dark px-2">
@@ -114,11 +119,28 @@
       <hr />
       <div class="row">
         <div class="col text-center">
-          <button type="button" class="btn btn-outline-secondary">SAVE</button>
-          <button type="button" class="btn btn-outline-secondary">
+          <button
+            id="btn-save"
+            type="button"
+            class="btn btn-js btn-outline-secondary"
+            onclick="changeBtnColors('btn-save')"
+          >
+            SAVE
+          </button>
+          <button
+            id="btn-cancel"
+            type="button"
+            class="btn btn-js btn-outline-secondary"
+            onclick="changeBtnColors('btn-cancel')"
+          >
             CANCEL
           </button>
-          <button type="button" class="btn btn-outline-secondary">
+          <button
+            id="btn-del"
+            type="button"
+            class="btn btn-js btn-outline-secondary"
+            onclick="changeBtnColors('btn-del')"
+          >
             DELETE PROFILE
           </button>
         </div>
@@ -138,12 +160,27 @@
     ></script>
     <!-- script mio -->
     <script>
+      /* menù a tendina lingue */
+
       document.querySelectorAll(".dropdown-item").forEach((item) => {
         item.addEventListener("click", () => {
           document.querySelector(".btn-outline-secondary").innerText =
             item.innerText;
         });
       });
+
+      /* cambio colore al click dei bottoni finali */
+
+      function changeBtnColors(buttonId) {
+        /* qua rimuovo la classe clicked così poi ogni bottone cliccato perde la classe quando se ne clicca un altro */
+        const btns = document.querySelectorAll(".btn-js");
+        btns.forEach((btn) => {
+          btn.classList.remove("clicked-btn");
+        });
+        /* aggiungo la classe ai bottoni cliccati */
+        const clickedBtn = document.getElementById(buttonId);
+        clickedBtn.classList.add("clicked-btn");
+      }
     </script>
   </body>
 </html>
