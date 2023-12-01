@@ -39,6 +39,14 @@
       .btn-outline-secondary {
         border-radius: 0;
       }
+
+      .btn-group {
+        background-color: black;
+      }
+
+      .custom-dropdown {
+        background-color: black;
+      }
     </style>
   </head>
   <body class="bg-dark px-2">
@@ -75,14 +83,14 @@
             <div class="btn-group">
               <button
                 type="button"
-                class="btn btn-outline-secondary dropdown-toggle"
+                class="btn btn-outline-secondary dropdown-toggle text-white"
                 data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
                 Language
               </button>
-              <div class="dropdown-menu dropdown-menu-dark">
+              <div class="custom-dropdown dropdown-menu dropdown-menu-dark">
                 <a class="dropdown-item" href="#">English</a>
                 <a class="dropdown-item" href="#">Spanish</a>
                 <a class="dropdown-item" href="#">German</a>
