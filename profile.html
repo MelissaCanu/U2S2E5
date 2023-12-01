@@ -56,7 +56,7 @@
       </div>
       <hr />
       <div class="row">
-        <div class="col-12 col-md-6 d-flex justify-content-end">
+        <div class="col-12 col-md-6 d-flex justify-content-md-end">
           <img
             src="./Netflix-assets/assets/avatar.png"
             alt="avatar profile icon"
@@ -68,7 +68,23 @@
           <div>Strive Student</div>
           <div>
             <p>Language:</p>
-            <!-- dropdown menu -->
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-outline-secondary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Language
+              </button>
+              <div class="dropdown-menu dropdown-menu-dark">
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">Spanish</a>
+                <a class="dropdown-item" href="#">German</a>
+                <a class="dropdown-item" href="#">Dutch</a>
+              </div>
+            </div>
           </div>
           <hr />
           <div>
@@ -97,7 +113,7 @@
       </div>
     </div>
 
-    <!-- script -->
+    <!-- script importato-->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -108,5 +124,14 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <!-- script mio -->
+    <script>
+      document.querySelectorAll(".dropdown-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          document.querySelector(".btn-outline-secondary").innerText =
+            item.innerText;
+        });
+      });
+    </script>
   </body>
 </html>
