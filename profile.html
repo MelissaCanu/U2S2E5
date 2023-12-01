@@ -52,9 +52,13 @@
         background-color: white !important;
         color: black !important;
       }
+
+      .custom-bg {
+        background-color: #343a40;
+      }
     </style>
   </head>
-  <body class="bg-dark px-2">
+  <body class="bg-dark px-2 text-white">
     <a href="#">
       <img
         src="/Netflix-assets/assets/netflix_logo.png"
@@ -66,7 +70,7 @@
     <div class="container d-flex flex-column align-items-center my-5">
       <div class="row">
         <div class="col text-center">
-          <h1 class="text-white">Edit profile</h1>
+          <h1 class="">Edit profile</h1>
         </div>
       </div>
       <hr />
@@ -80,20 +84,20 @@
           />
         </div>
         <div class="col-12 col-md-8">
-          <div class="text-center text-md-start bg-secondary text-white p-2">
+          <div class="text-center text-md-start bg-secondary p-2 mb-3">
             Strive Student
           </div>
           <div>
-            <p class="fs-2">Language:</p>
+            <p class="fs-4 mb-0">Language:</p>
             <div class="btn-group">
               <button
                 type="button"
-                class="btn btn-outline-secondary dropdown-toggle text-white"
+                class="btn btn-outline-secondary text-white dropdown-toggle"
                 data-bs-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Language
+                Select
               </button>
               <div class="custom-dropdown dropdown-menu dropdown-menu-dark">
                 <a class="dropdown-item" href="#">English</a>
@@ -105,10 +109,10 @@
           </div>
           <hr />
           <div>
-            <p class="fs-2">Maturity Settings:</p>
-            <div>ALL MATURITY RATINGS</div>
+            <p class="fs-4 mb-0 mb-2">Maturity Settings:</p>
+            <div class="custom-bg d-inline-block p-1">ALL MATURITY RATINGS</div>
             <p>Show titles of all maturity ratings for this profile.</p>
-            <button class="btn btn-outline-secondary">EDIT</button>
+            <button class="btn btn-outline-secondary mb-2">EDIT</button>
           </div>
           <hr />
           <p>Autoplay controls</p>
